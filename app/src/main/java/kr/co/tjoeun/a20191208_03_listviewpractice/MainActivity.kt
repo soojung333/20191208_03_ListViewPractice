@@ -10,8 +10,7 @@ import kr.co.tjoeun.a20191208_03_listviewpractice.datas.User
 class MainActivity : AppCompatActivity() {
 
     val studentList = ArrayList<User>()
-    var userAdapter : UserAdapter? = null
-
+    var userAdapter:UserAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 //        학생목록 추가
         addStudents()
 
-        userAdapter = userAdapter(this,R.layout.user_list_item, studentList)
+        userAdapter = UserAdapter(this, R.layout.user_list_item, studentList)
         userListView.adapter = userAdapter
 
     }
